@@ -28,6 +28,12 @@ npm start
 
 ## Running the tests
 
+To run tests
+
+```
+npm test
+```
+
 Local test results
 
 (https://raw.githubusercontent.com/DannyGolhar/Loco/65db16301dd95f254f5f91a5a2762a20296d53c0/loco-test.png)
