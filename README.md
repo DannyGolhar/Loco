@@ -1,6 +1,6 @@
 # Loco
 
-This backend application is develop to handle transactions.
+This backend application handles transactions.
 
 ### Prerequisites
 * Node 8.11.2 ++
@@ -42,4 +42,10 @@ Local test results
 * [https://www.getpostman.com/collections/fe99746626644efb307](https://www.getpostman.com/collections/fe99746626644efb3079)
 
 
+### API Aproach 
+``` 
+PUT /transactionservice/transaction/:transaction_id
+```
+* First checked for existing transaction id in saved transaction by 'getTransactionById()' function. If exist then error will thow to user. If there is no transaction id present then transaction details saved in by 'addTransactions()' function
+* Note:- 'transactions' array maintained in 'models\transaction\index.js' file.
 
