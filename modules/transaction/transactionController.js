@@ -6,7 +6,7 @@ module.exports.addTransaction = function(req, res){
     const {amount,type,parent_id} = pick(req.body, ['amount', 'type', 'parent_id']);
     let transaction_id = req.params.transaction_id;
     if(getTransactionById(transaction_id).length> 0) { // check if transaction id exist or not
-        res.status(500).send('Transanction Id already exist. Please use other one.'); // throw error if transaction id exist
+        res.status(400).send('Transanction sd already exist. Please use other one.'); // throw error if transaction id exist
     } else {
         addTransactions({amount,type,parent_id,transaction_id}); // Add transaction to records
         res.status(200).send();
