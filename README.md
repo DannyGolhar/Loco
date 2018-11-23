@@ -46,6 +46,24 @@ Local test results
 ``` 
 PUT /transactionservice/transaction/:transaction_id
 ```
-* First checked for existing transaction id in saved transaction by 'getTransactionById()' function. If exist then error will thow to user. If there is no transaction id present then transaction details saved in by 'addTransactions()' function
+* 1. Checked for existing transaction id in saved transaction by 'getTransactionById()' function. If exist then error will thow to user. If there is no transaction id present then transaction details saved in by 'addTransactions()' function
 * Note:- 'transactions' array maintained in 'models\transaction\index.js' file.
 
+
+
+``` 
+GET /transactionservice/transaction/:transaction_id
+```
+* Get transaction details by passing to 'getTransactionById()' function which return after filtering from transaction. 
+
+
+``` 
+GET /transactionservice/types/:type
+```
+* Get transaction id list by passing to 'getTransactionsByType()' function which return after filtering type from transaction. 
+
+``` 
+GET /transactionservice/sum/:transaction_id
+```
+* 1. Get transactions which having parent id same as passed transaction id.
+* 2. Calculate sum of amount of transactions from filtered transaction. 
