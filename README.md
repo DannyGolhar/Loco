@@ -14,7 +14,7 @@ Instruction to clone the repo and install the dependencies.
 git clone https://github.com/DannyGolhar/Loco.git
 ```
 
-To install dependedencies
+To install the dependencies
 
 ```
 npm install
@@ -46,7 +46,7 @@ Local test results
 ``` 
 PUT /transactionservice/transaction/:transaction_id
 ```
-* Checked for existing transaction id in saved transaction by 'getTransactionById()' function. If exist then error will thow to user. If there is no transaction id present then transaction details saved in by 'addTransactions()' function
+* Checked for existing transaction id in saving transaction by 'getTransactionById ()' function. If exist, then an error will throw to the user. If there is no transaction is present, then transaction details will save in by 'addTransactions ()' function
 * Note:- 'transactions' array maintained in 'models\transaction\index.js' file.
 
 
@@ -54,13 +54,13 @@ PUT /transactionservice/transaction/:transaction_id
 ``` 
 GET /transactionservice/transaction/:transaction_id
 ```
-* Get transaction details by passing to 'getTransactionById()' function which return after filtering from transaction. 
+* Get transaction details by passing to 'getTransactionById ()' function which return after filtering from the transaction.
 
 
 ``` 
 GET /transactionservice/types/:type
 ```
-* Get transaction id list by passing to 'getTransactionsByType()' function which return after filtering type from transaction. 
+* Get transaction id list by passing to 'getTransactionsByType ()' function which return after filtering type of transaction
 
 ``` 
 GET /transactionservice/sum/:transaction_id
