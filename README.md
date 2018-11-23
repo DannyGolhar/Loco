@@ -3,7 +3,7 @@
 This backend application is develop to handle transactions.
 
 ### Prerequisites
-* Node 8.11.2
+* Node 8.11.2 ++
 * git
 
 ### Installing
@@ -36,7 +36,7 @@ npm test
 
 Local test results
 
-(https://raw.githubusercontent.com/DannyGolhar/Loco/65db16301dd95f254f5f91a5a2762a20296d53c0/loco-test.png)
+* [Test Results](https://raw.githubusercontent.com/DannyGolhar/Loco/65db16301dd95f254f5f91a5a2762a20296d53c0/loco-test.png)
 
 ## Postman Collection
 * [https://www.getpostman.com/collections/fe99746626644efb307](https://www.getpostman.com/collections/fe99746626644efb3079)
