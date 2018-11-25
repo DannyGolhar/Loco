@@ -1,5 +1,6 @@
 const sumBy = require('lodash/sumBy');
 const filter = require('lodash/filter');
+const find = require('lodash/find');
 
 let transactions = []; // contains objects like { “amount”:double,“type”:string,“parent_id”:long, transaction_id: double } 
 
@@ -19,6 +20,11 @@ module.exports.getTransactionsByType = function(type) {
 } 
 
 module.exports.getSumOfTransactionsByParentId = function(id) {
-    let filteredTransactions = filter(transactions, {parent_id: id}); // filter transactions by parent id
-    return filteredTransactions.length > 0 ? sumBy(filteredTransactions,'amount') : 0; // calculate sum of amount if transactions exists for parent id.
+    let transaction = find(transactions, ['transaction_id', String(id)]);
+    let filteredTransactions = filter(transactions, {parent_id: Number(id)}); // filter transactions by parent id
+    if(filteredTransactions.length>0) {
+        return transaction.amount + sumBy(filteredTransactions,'amount'); // calculate sum of amount if transactions exists for parent id.
+    } else {
+        return transaction.amount;
+    }
 } 
